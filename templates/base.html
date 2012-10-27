@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="style.css" />
+    <title>Maratones Super Regionales ACM-ICPC 2012 - {% block title %} Bienvenido!{% endblock %}</title>
+  </head>
+  <body>
+    <div id="logo"></div>
+    <div id="sidebar">
+      <h3>Patrocinantes:</h3>
+      {% block sidebar %}
+      {% endblock %}
+    </div>
+    <div id="content">
+      <div id="menu">
+        <ul>
+          <li><a href="" class="{% block e_act %}{% endblock %}">El Evento</a></li>
+          <li><a href="" class="{% block u_act %}{% endblock %}">Ubicación</a></li>
+          <li><a href="" class="{% block it_act %}{% endblock %}">Itinerario</a></li>
+          <li><a href="" class="{% block in_act %}{% endblock %}">Inscripciones</a></li>
+          <li><a href="" class="{% block l_act %}{% endblock %}">Login</a></li>
+        </ul>
+      </div>
+      <div class="clear"></div>
+      {% block content %}{% endblock %}
+    </div>
+  </body>
+</html>
