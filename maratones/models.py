@@ -2,7 +2,7 @@ from django.db import models
 
 class CuentaBancaria(models.Model):
     banco = models.CharField(max_length=30)
-    cta = models.FieldInteger()
+    cta = models.IntegerField()
     tipo_cta = models.CharField(max_length=10)
     titular = models.CharField(max_length=30)
 
@@ -17,8 +17,8 @@ class Solicitud(models.Model):
 class Pago(models.Model):
     num_ref = models.CharField(max_length=50)
     monto = models.IntegerField()
-    solicitud = models.ForeignKey(models.Solicitud)
-    cta = models.ForeignKey(models.CuentaBancaria)
+    solicitud = models.ForeignKey(Solicitud)
+    cta = models.ForeignKey(CuentaBancaria)
 
 class Inscripcion(models.Model):
 	equipo = models.CharField(max_length=30)
