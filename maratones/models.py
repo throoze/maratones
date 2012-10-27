@@ -12,6 +12,9 @@ class Solicitud(models.Model):
     participante = models.CharField(max_length=30)
     participante2 = models.CharField(max_length=30)
     participante3 = models.CharField(max_length=30)
+    ced1 = models.IntegerField()
+    ced2 = models.IntegerField()
+    ced3 = models.IntegerField()
     forma_pago = models.CharField(max_length=30)
 
 class Pago(models.Model):
