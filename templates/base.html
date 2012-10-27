@@ -1,28 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link rel="stylesheet" href="style.css" />
-    <title>Maratones Super Regionales ACM-ICPC 2012 - {% block title %} Bienvenido!{% endblock %}</title>
-  </head>
-  <body>
-    <div id="logo"></div>
-    <div id="sidebar">
-      <h3>Patrocinantes:</h3>
-      {% block sidebar %}
-      {% endblock %}
-    </div>
-    <div id="content">
-      <div id="menu">
-        <ul>
-          <li><a href="" class="{% block e_act %}{% endblock %}">El Evento</a></li>
-          <li><a href="" class="{% block u_act %}{% endblock %}">Ubicación</a></li>
-          <li><a href="" class="{% block it_act %}{% endblock %}">Itinerario</a></li>
-          <li><a href="" class="{% block in_act %}{% endblock %}">Inscripciones</a></li>
-          <li><a href="" class="{% block l_act %}{% endblock %}">Login</a></li>
-        </ul>
-      </div>
-      <div class="clear"></div>
-      {% block content %}{% endblock %}
-    </div>
-  </body>
+    <head>
+        {% load static from staticfiles %}
+        <link rel="stylesheet" href="{% static "css/layout.css" %}" />
+              <title>Maratones Super Regionales ACM-ICPC 2012 - {% block title %} Bienvenido!{% endblock %}</title>
+    </head>
+    <body>
+        <div id="wrapper" >
+            <div id="logo"></div>
+            <div id="sidebar">
+                <h3>Patrocinantes:</h3>
+                {% block sidebar %}
+                {% endblock %}
+            </div>
+            <div id="content">
+                <div id="menu">
+                    <ul>
+                        <li><a href="{% url maratones.views.home %}" class="{% block e_act %}{% endblock %}">El Evento</a></li>
+                        <li><a href="/ubicacion" class="{% block u_act %}{% endblock %}">Ubicación</a></li>
+                        <li><a href="/itinerario" class="{% block it_act %}{% endblock %}">Itinerario</a></li>
+                        <li><a href="{% url maratones.views.home %}" class="{% block in_act %}{% endblock %}">Inscripciones</a></li>
+                        <li><a href="{% url maratones.views.home %}" class="{% block l_act %}{% endblock %}">Login</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                {% block content %}{% endblock %}
+            </div>
+        </div>
+    </body>
 </html>
