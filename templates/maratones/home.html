@@ -2,6 +2,26 @@
 
 {% block e_act %}.active{% endblock %}
 
+{% block stylesheets %}
+    {% load static from staticfiles %}
+    <link rel="stylesheet" href="{% static "css/home.css" %}" />
+{% endblock %}
+
 {% block content %}
-<h1>Bienvenido al sitio de los maratones!</h1>
+<h1>Maratón de Programación Regional- Eliminatoria Regional
+    Suramericana - Caracas 2012</h1>
+<p id="intro-text" class="p">
+    Venezuela organiza competencias de programación en formato ACM-ICPC 
+    desde 1.996 en la UCV y en otras instituciones universitarias
+    venezolanas desde 1.998. En 2.009 ACM-ICPC Mundial autorizó la
+    integración de las diferentes zonas que conforman Latinoamérica para
+    crear la Súper Regional más grande de todo el mundo con la mayor
+    cantidad de países en competencia. Venezuela forma parte de la Zona
+    Suramérica Norte, conjuntamente con Colombia, Ecuador y Panamá. De estas
+    competencias suramericanas, Venezuela ha clasificado para la competencia
+    mundial en 9 ocasiones (4 veces USB, 3 veces UCV y 2 veces UCLA). Para
+    este 2.012 se trabaja y espera superar la cantidad de equipos e
+    instituciones de educación universitaria que compitan. Por primera vez
+    la sede suramericana será la USB.
+</p>
 {% endblock %}

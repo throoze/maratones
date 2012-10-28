@@ -4,10 +4,13 @@
         {% load static from staticfiles %}
         <link rel="stylesheet" href="{% static "css/layout.css" %}" />
               <title>Maratones Super Regionales ACM-ICPC 2012 - {% block title %} Bienvenido!{% endblock %}</title>
+        {% block stylesheets %}{% endblock %}
     </head>
     <body>
         <div id="wrapper" >
-            <div id="logo"></div>
+            <div id="logo-wrapper">
+                <div id="logo"></div>
+            </div>
             <div id="sidebar">
                 <h3>Patrocinantes:</h3>
                 {% block sidebar %}
@@ -17,14 +20,34 @@
                 <div id="menu">
                     <ul>
                         <li><a href="{% url maratones.views.home %}" class="{% block e_act %}{% endblock %}">El Evento</a></li>
-                        <li><a href="/ubicacion" class="{% block u_act %}{% endblock %}">Ubicación</a></li>
-                        <li><a href="/itinerario" class="{% block it_act %}{% endblock %}">Itinerario</a></li>
+                        <li><a href="{% url maratones.views.ubicacion %}" class="{% block u_act %}{% endblock %}">Ubicación</a></li>
+                        <li><a href="{% url maratones.views.itinerario %}" class="{% block it_act %}{% endblock %}">Itinerario</a></li>
                         <li><a href="{% url maratones.views.home %}" class="{% block in_act %}{% endblock %}">Inscripciones</a></li>
                         <li><a href="{% url maratones.views.home %}" class="{% block l_act %}{% endblock %}">Login</a></li>
                     </ul>
                 </div>
                 <div class="clear"></div>
-                {% block content %}{% endblock %}
+                <div id="inner-content-wrapper">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div id="footer-wrapper">
+                <div id="footer">
+                    <p class="p">Desarrollado por JD-CEIC 2012-2013 ©2012</p> | 
+                    <p class="p">
+                        <a href="http://usb.ve/">
+                            <img id="usb-logo" alt="usb" title="usb" src="{% static "images/usb-logo.png" %}"/>
+                                 usb
+                        </a>
+                    </p> |
+                    <p class="p">
+                        <a href="http://icpc.baylor.edu/">
+                            <img id="acmicpc-logo" alt="ACM-ICPC" title="ACM-ICPC" src="{% static "images/acmicpc-logo.png" %}"/>
+                                 ACM-ICPC
+                        </a>
+                    </p>
+                </div>
             </div>
         </div>
     </body>
