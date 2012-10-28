@@ -17,7 +17,7 @@ body {
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
     text-align: justify;
-    text-indent: 10px;
+    text-indent: 40px;
 }
 
 .sep {
@@ -119,4 +119,5 @@ body {
 #footer .p {
     display: inline;
     margin: 0 5% 0 5%;
+    font-size: small;
 }
