@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block e_act %}.active{% endblock %}
+{% block e_act %}active{% endblock %}
 
 {% block stylesheets %}
     {% load static from staticfiles %}
@@ -8,20 +8,67 @@
 {% endblock %}
 
 {% block content %}
-<h1>Maratón de Programación Regional- Eliminatoria Regional
-    Suramericana - Caracas 2012</h1>
-<p id="intro-text" class="p">
-    Venezuela organiza competencias de programación en formato ACM-ICPC 
-    desde 1.996 en la UCV y en otras instituciones universitarias
-    venezolanas desde 1.998. En 2.009 ACM-ICPC Mundial autorizó la
-    integración de las diferentes zonas que conforman Latinoamérica para
-    crear la Súper Regional más grande de todo el mundo con la mayor
-    cantidad de países en competencia. Venezuela forma parte de la Zona
-    Suramérica Norte, conjuntamente con Colombia, Ecuador y Panamá. De estas
-    competencias suramericanas, Venezuela ha clasificado para la competencia
-    mundial en 9 ocasiones (4 veces USB, 3 veces UCV y 2 veces UCLA). Para
-    este 2.012 se trabaja y espera superar la cantidad de equipos e
-    instituciones de educación universitaria que compitan. Por primera vez
-    la sede suramericana será la USB.
-</p>
+<div id="intro-text">
+    <h1>
+        Maratón de Programación Regional- Eliminatoria Regional
+        Suramericana - Caracas 2012
+    </h1>
+    <p class="p">
+        Venezuela organiza competencias de programación en formato ACM-ICPC 
+        desde 1.996 en la UCV y en otras instituciones universitarias
+        venezolanas desde 1.998. En 2.009 ACM-ICPC Mundial autorizó la
+        integración de las diferentes zonas que conforman Latinoamérica para
+        crear la Súper Regional más grande de todo el mundo con la mayor
+        cantidad de países en competencia. Venezuela forma parte de la Zona
+        Suramérica Norte, conjuntamente con Colombia, Ecuador y Panamá. De estas
+        competencias suramericanas, Venezuela ha clasificado para la competencia
+        mundial en 9 ocasiones (4 veces USB, 3 veces UCV y 2 veces UCLA). Para
+        este 2.012 se trabaja y espera superar la cantidad de equipos e
+        instituciones de educación universitaria que compitan. Por primera vez
+        la sede suramericana será la USB.
+    </p>
+</div>
+<div id="historic-review">
+    <h3>
+        Breve historia de las competencias de programación ACM-ICPC
+    </h3>
+    <p class="p">
+        ACM acrónimo de Association for Computing Machinery.  Fue fundada en
+        1.947 como la primera sociedad científica y educativa acerca de la
+        Computación. Publica varias revistas y periódicos científicos
+        relacionados con la computación; patrocina conferencias en varias aéreas
+        del campo de la computación  (principalmente el SIGGRAPH y el SIGCOMM) y
+        otros eventos relacionados con las  Ciencias de la  Computación como por
+        ejemplo, desde 1.976, la competencia internacional “ACM International
+        Collegiate Programming Contest (ICPC)”. Venezuela organiza competencias
+        de programación en formato ACMICPC desde 1.996 en la Universidad Central
+        de Venezuela y en otras instituciones universitarias venezolanas desde
+        1.998. En 2.009 ACM-ICPC Mundial autorizó la integración de las
+        diferentes zonas que conforman Latinoamérica para crear la Súper
+        Regional más grande de todo el mundo con la mayor cantidad de países en
+        competencia, a saber:
+    </p>
+    <ol>
+        <li>Zona Centro América: México y países centro americanos.</li>
+        <li>Zona Mar Caribe: Cuba, Jamaica y Republica Dominicana.</li>
+        <li>Zona Suramérica Norte: Colombia, Ecuador, Panamá y Venezuela.</li>
+        <li>Zona Suramérica Sur: Argentina, Bolivia, Chile y Perú.</li>
+        <li>Zona Brasil: Brasil.</li>
+    </ol>
+    <ul>
+        <li>En 2.009 compitieron 399 equipos.</li>
+        <li>En 2.010 compitieron 532 equipos.</li>
+        <li>En 2.011 compitieron 752 equipos.</li>
+    </ul>
+    <p class="p">
+        Para este 2.012 se trabaja y espera superar la cantidad de equipos e
+        instituciones de educación universitaria que compitan. Se debe destacar
+        que Brasil y Cuba están organizando campamentos de entrenamientos para
+        los equipos clasificados  competidores dentro de ACMICPC  la Final
+        Mundial ACM-ICPC. Entre los meses de Mayo y Octubre de 2.012 se estará
+        realizando en las principales Instituciones de Educación Universitaria
+        de Venezuela las competencias locales de programación en formato
+        ACM-ICPC.
+    </p>
+</div>
 {% endblock %}

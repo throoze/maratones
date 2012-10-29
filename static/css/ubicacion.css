@@ -1,0 +1,14 @@
+#map-canvas {
+    float: right;
+    width: 350px;
+    height: 350px;
+}
+
+#text-info {
+    float: left;
+    width: 50%;
+}
+
+#text-info p {
+    font-size: .9em;
+}

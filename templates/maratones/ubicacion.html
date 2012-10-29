@@ -1,7 +1,27 @@
 {% extends "base.html" %}
 
-{% block u_act %}.active{% endblock %}
+{% block u_act %}active{% endblock %}
+
+{% block stylesheets %}
+    {% load static from staticfiles %}
+    <link rel="stylesheet" href="{% static "css/ubicacion.css" %}" />
+{% endblock %}
 
 {% block content %}
-<h1>Bienvenido al sitio de ubicacion los maratones!</h1>
+<div id="text-info">
+    <h3>Ubicación:</h3>
+    <p class="p">
+        Los Maratones Super Regionales ACM-ICPC USB 2012 serán realizados en las
+        instalaciones de la Universidad Simón Bolívar, ubicada en Sartenejas,
+        Baruta, Edo. Miranda - Apartado 89000 Cable Unibolivar Caracas
+        Venezuela; en el edificio de Matemática y Sistemas, 2do piso, en las
+        salas del Laboratorio Docente de Computación.
+    </p>
+</div>
+<div id="map-canvas"></div>
+{% endblock %}
+
+{% block scripts %}
+    {% load static from staticfiles %}
+    <script type="text/javascript" src="{% static "js/ubicacion.js" %}"></script>
 {% endblock %}

@@ -1,0 +1,26 @@
+#inner-content-wrapper table {
+    border: solid 3px #1144AA;
+    border-collapse: collapse;
+}
+
+#inner-content-wrapper tr {
+    border: solid 2px #1144AA;
+    padding: 10px 0;
+}
+
+#inner-content-wrapper thead {
+    border: solid 3px #1144AA;
+}
+
+#inner-content-wrapper .horario-cell {
+    width: 30%;
+    text-align: center;
+    border-right: solid 3px #1144AA;
+    padding: 10px;
+}
+
+#inner-content-wrapper .actividad-cell {
+    width: 70%;
+    text-align: center;
+    padding: 10px;
+}

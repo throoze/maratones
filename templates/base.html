@@ -3,7 +3,11 @@
     <head>
         {% load static from staticfiles %}
         <link rel="stylesheet" href="{% static "css/layout.css" %}" />
-              <title>Maratones Super Regionales ACM-ICPC 2012 - {% block title %} Bienvenido!{% endblock %}</title>
+        <script type="text/javascript" src="{% static "js/jquery-1.8.2.js" %}"></script>
+        <script type="text/javascript" src="https://maps.google.com/maps/api/js?sensor=false&region=VE"></script>
+        <title>
+            Maratones Super Regionales ACM-ICPC 2012 - {% block title %} Bienvenido!{% endblock %}
+        </title>
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
@@ -19,11 +23,11 @@
             <div id="content">
                 <div id="menu">
                     <ul>
-                        <li><a href="{% url maratones.views.home %}" class="{% block e_act %}{% endblock %}">El Evento</a></li>
-                        <li><a href="{% url maratones.views.ubicacion %}" class="{% block u_act %}{% endblock %}">Ubicación</a></li>
-                        <li><a href="{% url maratones.views.itinerario %}" class="{% block it_act %}{% endblock %}">Itinerario</a></li>
-                        <li><a href="{% url maratones.views.home %}" class="{% block in_act %}{% endblock %}">Inscripciones</a></li>
-                        <li><a href="{% url maratones.views.home %}" class="{% block l_act %}{% endblock %}">Login</a></li>
+                        <li class="{% block e_act %}{% endblock %}"><a href="{% url maratones.views.home %}">El Evento</a></li>
+                        <li class="{% block u_act %}{% endblock %}"><a href="{% url maratones.views.ubicacion %}">Ubicación</a></li>
+                        <li class="{% block it_act %}{% endblock %}"><a href="{% url maratones.views.itinerario %}">Itinerario</a></li>
+                        <li class="{% block in_act %}{% endblock %}"><a href="{% url maratones.views.home %}">Inscripciones</a></li>
+                        <li class="{% block l_act %}{% endblock %}"><a href="{% url maratones.views.home %}">Login</a></li>
                     </ul>
                 </div>
                 <div class="clear"></div>
@@ -50,5 +54,6 @@
                 </div>
             </div>
         </div>
+        {% block scripts %}{% endblock %}
     </body>
 </html>
