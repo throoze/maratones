@@ -1,6 +1,7 @@
 #inner-content-wrapper table {
-    border: solid 3px #1144AA;
+    border: solid 4px #1144AA;
     border-collapse: collapse;
+    margin: 50px auto 10px auto;
 }
 
 #inner-content-wrapper tr {
@@ -9,13 +10,13 @@
 }
 
 #inner-content-wrapper thead {
-    border: solid 3px #1144AA;
+    border: solid 4px #1144AA;
 }
 
 #inner-content-wrapper .horario-cell {
     width: 30%;
     text-align: center;
-    border-right: solid 3px #1144AA;
+    border-right: solid 4px #1144AA;
     padding: 10px;
 }
 

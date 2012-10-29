@@ -8,7 +8,7 @@ a {
 }
 
 .active {
-    border-bottom: solid 2px #1144AA;
+    border-bottom: solid 3px #1144AA;
 }
 
 body {
@@ -93,7 +93,7 @@ body {
 }
 
 #menu li:hover {
-    border-bottom: solid 2px #1144AA;
+    border-bottom: solid 3px #1144AA;
 }
 
 #footer-wrapper {
