@@ -18,6 +18,14 @@
             <div id="sidebar">
                 <h3>Patrocinantes:</h3>
                 {% block sidebar %}
+                <ul>
+                  <li>Vicerrectorado administrativo USB</li>
+                  <li>Dirección de servicios USB</li>
+                  <li>Departamento de computación y TI</li>
+                  <li>Laboratorio Docente de Computacion</li>
+                  <li>CEIC</li>
+                  <li>Funindes (tentativo)</li>
+                </ul>
                 {% endblock %}
             </div>
             <div id="content">
@@ -26,7 +34,7 @@
                         <li class="{% block e_act %}{% endblock %}"><a href="{% url maratones.views.home %}">El Evento</a></li>
                         <li class="{% block u_act %}{% endblock %}"><a href="{% url maratones.views.ubicacion %}">Ubicación</a></li>
                         <li class="{% block it_act %}{% endblock %}"><a href="{% url maratones.views.itinerario %}">Itinerario</a></li>
-                        <li class="{% block in_act %}{% endblock %}"><a href="{% url maratones.views.home %}">Inscripciones</a></li>
+                        <li class="{% block in_act %}{% endblock %}"><a href="{% url maratones.views.inscripcion %}">Inscripciones</a></li>
                         <li class="{% block l_act %}{% endblock %}"><a href="{% url maratones.views.home %}">Login</a></li>
                     </ul>
                 </div>
