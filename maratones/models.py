@@ -7,15 +7,18 @@ class CuentaBancaria(models.Model):
     titular = models.CharField(max_length=30)
 
 class Solicitud(models.Model):
-
-    coach = models.CharField(max_length=30)
-    participante = models.CharField(max_length=30)
-    participante2 = models.CharField(max_length=30)
-    participante3 = models.CharField(max_length=30)
-    ced1 = models.IntegerField()
-    ced2 = models.IntegerField()
-    ced3 = models.IntegerField()
-    forma_pago = models.CharField(max_length=30)
+    nombre_del_coach = models.CharField(max_length=50)
+    nombre_del_participante_1 = models.CharField(max_length=50)
+    nombre_del_participante_2 = models.CharField(max_length=50)
+    nombre_del_participante_3 = models.CharField(max_length=50)
+    cedula_del_coach = models.CharField(max_length=50)
+    cedula_del_participante_1 = models.CharField(max_length=50)
+    cedula_del_participante_2 = models.CharField(max_length=50)
+    cedula_del_participante_3 = models.CharField(max_length=50)
+    email_del_coach = models.CharField(max_length=50)
+    email_del_participante_1 = models.CharField(max_length=50)
+    email_del_participante_2 = models.CharField(max_length=50)
+    email_del_participante_3 = models.CharField(max_length=50)
 
 class Pago(models.Model):
     num_ref = models.CharField(max_length=50)
@@ -26,7 +29,7 @@ class Pago(models.Model):
 class Inscripcion(models.Model):
     equipo = models.CharField(max_length=30)
     solic_previa = models.OneToOneField(Solicitud)
-    
+
 class Patrocinante(models.Model):
     nombre = models.CharField(max_length=30)
     rif = models.CharField(max_length=20)

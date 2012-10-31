@@ -1,3 +1,4 @@
+#  -*- coding: utf-8 -*-
 from models import *
 from forms import *
 from django.shortcuts import get_object_or_404, render_to_response, render
@@ -7,19 +8,26 @@ from django.core.urlresolvers import reverse
 #from django.http import HttpResponse
 
 def home(request):
-    return render_to_response('maratones/home.html', {},
-                               context_instance=RequestContext(request))
+    return render_to_response('maratones/home.html')
 
 def ubicacion(request):
-    return render_to_response('maratones/ubicacion.html', {},
-                               context_instance=RequestContext(request))
+    return render_to_response('maratones/ubicacion.html')
 
 def itinerario(request):
-    return render_to_response('maratones/itinerario.html', {},
-                               context_instance=RequestContext(request))
+    return render_to_response('maratones/itinerario.html')
 
-def inscripciones(request):
-    return render_to_response('maratones/home.html', {},
+def inscripcion(request):
+    form = SolicitudForm()
+    if request.method == 'POST':
+        if form.is_valid():
+            return render_to_response(
+                'maratones/inscripcion.html',
+                { 'form' : form,
+                  'msg'  : "Agregado con éxito!"},
+                context_instance=RequestContext(request))
+    return render_to_response('maratones/inscripcion.html',
+                              { 'form' : form,
+                                'msg'  : 'Esta es la normal'},
                                context_instance=RequestContext(request))
 
 def login(request):
@@ -37,17 +45,16 @@ def login(request):
 #     # user hits the Back button.
 #     return render_to_response('maratones/solicitud.html',{},context_instance=RequestContext(request))
 
-def registrar(request):
-    formset = SolicitudForm(request.POST)
-    if formset.is_valid():
-        formset.save()
+# def registrar(request):
+#     formset = SolicitudForm(request.POST)
+#     if formset.is_valid():
+#         formset.save()
 
-    return render_to_response('maratones/solicitud.html',{fm:formset},context_instance=RequestContext(request))
+#     return render_to_response('maratones/solicitud.html',{fm:formset},context_instance=RequestContext(request))
 
 
-def solicitud(request):
-    fm = SolicitudForm(request.POST)
-    if fm.is_valid():
-        fm.save()
-    return render_to_response('maratones/solicitud.html',{fm:fm},context_instance=RequestContext(request))
-
+# def solicitud(request):
+#     fm = SolicitudForm(request.POST)
+#     if fm.is_valid():
+#         fm.save()
+#     return render_to_response('maratones/solicitud.html',{fm:fm},context_instance=RequestContext(request))
